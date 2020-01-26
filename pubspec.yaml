@@ -62,6 +62,22 @@ flutter:
     - assets/images/facial_image_for_list.png
     - assets/images/make_up_image_for_list.jpg
     - assets/images/hair_style_Image_for_list.png
+    - assets/images/bridal_make_up.png
+    - assets/images/make_up_icon.png
+    - assets/images/package_icon.png
+    - assets/images/sallon_at_home_icon.png
+    - assets/images/spa_at_home.png
+    - assets/images/experience_shundorgo_image.png
+    - assets/images/facial_for_woman.png
+    - assets/images/hair_style_at_home.png   
+    - assets/images/therapy_massage_image.png  
+    - assets/images/oil_massage_image.png  
+    - assets/images/scrub_and_polish.png  
+    - assets/images/spa_relaxation_package_image.png  
+    - assets/images/mini_massage_add_ons_image.png
+    - assets/images/party_make_up_image.png      
+
+
     
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg

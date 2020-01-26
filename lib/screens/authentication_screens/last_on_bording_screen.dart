@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import '../screens/explore/main_explore_screen.dart';
-import 'package:shundor_go/screens/explore/main_explore_screen.dart';
+import 'package:shundor_go/screens/explore/both_explore_screen.dart';
+import 'package:shundor_go/screens/explore/woman_explore_screen.dart';
 
 class LastOnBordingScreen extends StatelessWidget {
   static const routeName = '/last_onbording_screen';
@@ -59,7 +60,7 @@ class LastOnBordingScreen extends StatelessWidget {
                   children: <Widget>[
                     InkWell(
                       onTap: () => Navigator.of(context)
-                          .pushReplacementNamed(MainExploreScreen.routeName),
+                          .pushNamed(WomanExploreScreen.routeName),
                       child: Container(
                         margin: EdgeInsets.only(
                           left: 16,
@@ -80,7 +81,8 @@ class LastOnBordingScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: null,
+                      onTap: () => Navigator.of(context)
+                          .pushNamed(BothExploreScreen.routeName),
                       child: Container(
                         margin: EdgeInsets.only(left: 16, right: 16),
                         padding: EdgeInsets.all(16),
@@ -98,7 +100,8 @@ class LastOnBordingScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: null,
+                      onTap: () => Navigator.of(context)
+                          .pushNamed(BothExploreScreen.routeName),
                       child: Container(
                         margin: EdgeInsets.only(left: 16, right: 16),
                         padding: EdgeInsets.all(16),

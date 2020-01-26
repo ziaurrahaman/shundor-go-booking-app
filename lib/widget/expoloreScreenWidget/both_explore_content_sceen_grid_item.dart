@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/screens/explore/optional_explore_screen.dart';
+import 'package:shundor_go/screens/explore/woman_explore_screen.dart';
 
-class MainExporeSceenGridItem extends StatelessWidget {
+class BothExporeSceenGridItem extends StatelessWidget {
   final String title;
   final String gridImagePath;
 
-  MainExporeSceenGridItem(this.title, this.gridImagePath);
+  BothExporeSceenGridItem(this.title, this.gridImagePath);
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () =>
-          Navigator.of(context).pushNamed(OptionalExploreScreen.routeName),
+      onTap: null,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,

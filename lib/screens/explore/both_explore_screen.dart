@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/explore_screen_bottom_navigationbar.dart';
+import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
+import 'package:shundor_go/screens/explore/both_explore_content_screen.dart';
 
-class OptionalExploreScreen extends StatefulWidget {
-  static const routeName = '/optional_explore_screen';
+class BothExploreScreen extends StatefulWidget {
+  static const routeName = '/main_explore_screen';
   @override
-  _OptionalExploreScreenState createState() => _OptionalExploreScreenState();
+  _BothExploreScreenState createState() => _BothExploreScreenState();
 }
 
-class _OptionalExploreScreenState extends State<OptionalExploreScreen> {
+class _BothExploreScreenState extends State<BothExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,12 +55,13 @@ class _OptionalExploreScreenState extends State<OptionalExploreScreen> {
             )
           ],
         ),
-        backgroundColor: const Color(0xFFD4AF37),
+        backgroundColor: Colors.black,
       ),
+      body: BothExploreContentScreen(),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
             canvasColor: Colors.black, primaryColor: const Color(0xFFD4AF37)),
-        child: ExploreScreenBottomNavigationbar(),
+        child: BothExploreScreenBottomNavigationbar(),
       ),
     );
   }

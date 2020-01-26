@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shundor_go/dummyData/dummy_grid_data.dart';
 import 'package:shundor_go/dummyData/dummy_popular_offer_list_data.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/main_explore_content_screen_list_item.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/main_explore_content_sceen_grid_item.dart';
+import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_content_screen_list_item.dart';
+import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_content_sceen_grid_item.dart';
 
-class MainExploreContentScreen extends StatefulWidget {
+class BothExploreContentScreen extends StatefulWidget {
   @override
-  _MainExploreContentScreenState createState() =>
-      _MainExploreContentScreenState();
+  _BothExploreContentScreenState createState() =>
+      _BothExploreContentScreenState();
 }
 
-class _MainExploreContentScreenState extends State<MainExploreContentScreen> {
+class _BothExploreContentScreenState extends State<BothExploreContentScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -45,7 +45,7 @@ class _MainExploreContentScreenState extends State<MainExploreContentScreen> {
                 child: GridView.builder(
                   padding: EdgeInsets.all(8),
                   itemCount: MAINEXPLORE_SCREEN_GRIDS.length,
-                  itemBuilder: (ctx, index) => MainExporeSceenGridItem(
+                  itemBuilder: (ctx, index) => BothExporeSceenGridItem(
                       MAINEXPLORE_SCREEN_GRIDS[index].title,
                       MAINEXPLORE_SCREEN_GRIDS[index].gridImagePath),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

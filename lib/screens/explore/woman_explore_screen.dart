@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/explore_screen_bottom_navigationbar.dart';
-import 'package:shundor_go/screens/explore/main_explore_content_screen.dart';
+import 'package:shundor_go/screens/explore/woman_explore_sceen_content.dart';
+import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
 
-class MainExploreScreen extends StatefulWidget {
-  static const routeName = '/main_explore_screen';
+class WomanExploreScreen extends StatefulWidget {
+  static const routeName = '/optional_explore_screen';
   @override
-  _MainExploreScreenState createState() => _MainExploreScreenState();
+  _WomanExploreScreenState createState() => _WomanExploreScreenState();
 }
 
-class _MainExploreScreenState extends State<MainExploreScreen> {
+class _WomanExploreScreenState extends State<WomanExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,13 +55,13 @@ class _MainExploreScreenState extends State<MainExploreScreen> {
             )
           ],
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xFFD4AF37),
       ),
-      body: MainExploreContentScreen(),
+      body: WomanExploreScreenContent(),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
             canvasColor: Colors.black, primaryColor: const Color(0xFFD4AF37)),
-        child: ExploreScreenBottomNavigationbar(),
+        child: BothExploreScreenBottomNavigationbar(),
       ),
     );
   }

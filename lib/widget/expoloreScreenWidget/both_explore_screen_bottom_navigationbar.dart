@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class ExploreScreenBottomNavigationbar extends StatefulWidget {
+class BothExploreScreenBottomNavigationbar extends StatefulWidget {
   @override
-  _ExploreScreenBottomNavigationbarState createState() =>
-      _ExploreScreenBottomNavigationbarState();
+  _BothExploreScreenBottomNavigationbarState createState() =>
+      _BothExploreScreenBottomNavigationbarState();
 }
 
-class _ExploreScreenBottomNavigationbarState
-    extends State<ExploreScreenBottomNavigationbar> {
+class _BothExploreScreenBottomNavigationbarState
+    extends State<BothExploreScreenBottomNavigationbar> {
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
