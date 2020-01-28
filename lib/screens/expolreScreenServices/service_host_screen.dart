@@ -13,8 +13,7 @@ class ServiceHostScreen extends StatefulWidget {
   _ServiceHostScreen createState() => _ServiceHostScreen();
 }
 
-class _ServiceHostScreen extends State<ServiceHostScreen>
-    with TickerProviderStateMixin {
+class _ServiceHostScreen extends State<ServiceHostScreen> {
   var index = 0;
   final List<MyTabs> _tabs = [
     MyTabs('Salon At Home'),

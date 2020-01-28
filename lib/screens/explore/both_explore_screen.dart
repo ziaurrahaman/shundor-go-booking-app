@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shundor_go/screens/expolreScreenServices/profile_screen.dart';
+import 'package:shundor_go/screens/expolreScreenServices/transactions_screen.dart';
 import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
 import 'package:shundor_go/screens/explore/both_explore_content_screen.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:shundor_go/screens/expolreScreenServices/booking_screen.dart';
+import 'package:shundor_go/widget/expoloreScreenWidget/explore_screen_tilte.dart';
 
 class BothExploreScreen extends StatefulWidget {
   static const routeName = '/main_explore_screen';
@@ -9,10 +14,49 @@ class BothExploreScreen extends StatefulWidget {
 }
 
 class _BothExploreScreenState extends State<BothExploreScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+  int _selectedIndex = 0;
+  var bottomNavigationScreens = [
+    BothExploreContentScreen(),
+    BookingScreen(),
+    TransactionsScreen(),
+    ProfileScreen(),
+  ];
+  var appbarTitle = [
+    ExploreScreenTitle(),
+    Text(
+      'Bookings',
+      style: TextStyle(fontSize: 20),
+    ),
+    Text(
+      'Transactions',
+      style: TextStyle(fontSize: 20),
+    ),
+    Text(''),
+  ];
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  bool isSelectedIndexGreaterThanZero() {
+    if (_selectedIndex > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  Widget showOrHideAppbar() {
+    if (_selectedIndex == 3) {
+      return PreferredSize(
+        preferredSize: Size.fromHeight(0),
+        child: AppBar(
+          backgroundColor: Colors.black,
+        ),
+      );
+    } else {
+      return AppBar(
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
@@ -21,47 +65,56 @@ class _BothExploreScreenState extends State<BothExploreScreen> {
           )
         ],
         automaticallyImplyLeading: false,
-        title: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(left: 2),
-                  child: Text(
-                    'Find Service at',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(color: Colors.white, fontSize: 10),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Icon(
-                  Icons.location_on,
-                  color: Colors.white,
-                  size: 16,
-                ),
-                Text(
-                  'Bashundhara R\/A',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                )
-              ],
-            )
-          ],
-        ),
+        centerTitle: isSelectedIndexGreaterThanZero(),
+        title: appbarTitle[_selectedIndex],
+        // backgroundColor: const Color(0xFFD4AF37),
         backgroundColor: Colors.black,
-      ),
-      body: BothExploreContentScreen(),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: showOrHideAppbar(),
+      body: bottomNavigationScreens[_selectedIndex],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
             canvasColor: Colors.black, primaryColor: const Color(0xFFD4AF37)),
-        child: BothExploreScreenBottomNavigationbar(),
+        child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            onTap: _onItemTapped,
+            backgroundColor: Colors.black,
+            unselectedItemColor: Colors.white,
+            showSelectedLabels: true,
+            currentIndex: _selectedIndex,
+            selectedItemColor: const Color(0xFFD4AF37),
+            selectedFontSize: 12,
+            unselectedFontSize: 12,
+            items: [
+              const BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.search,
+                  ),
+                  title: Text('Explore')),
+              const BottomNavigationBarItem(
+                  icon: Icon(
+                    MdiIcons.calendarMonthOutline,
+                  ),
+                  title: Text(
+                    'Booking',
+                  )),
+              const BottomNavigationBarItem(
+                  icon: Icon(
+                    MdiIcons.formatAlignJustify,
+                  ),
+                  title: Text('Transactions')),
+              const BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.person_outline,
+                  ),
+                  title: Text('Profile')),
+            ]),
       ),
     );
   }
