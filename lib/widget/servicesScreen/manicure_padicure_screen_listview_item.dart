@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shundor_go/screens/expolreScreenServices/service_provider_screen.dart';
 
 class ManicurePadicureScreenListviewItem extends StatelessWidget {
   final String tile;
@@ -44,17 +45,21 @@ class ManicurePadicureScreenListviewItem extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(
-                        height: 40,
-                        width: 80,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.rectangle, color: Colors.black),
-                        child: Center(
-                          child: Text(
-                            'BOOK',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                      InkWell(
+                        onTap: () => Navigator.of(context)
+                            .pushNamed(ServiceProvidersScreen.routeName),
+                        child: Container(
+                          height: 40,
+                          width: 80,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.rectangle, color: Colors.black),
+                          child: Center(
+                            child: Text(
+                              'BOOK',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
                       ),

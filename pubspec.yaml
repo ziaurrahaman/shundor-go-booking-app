@@ -77,6 +77,9 @@ flutter:
     - assets/images/mini_massage_add_ons_image.png
     - assets/images/party_make_up_image.png     
     - assets/images/profile_image.png   
+    - assets/images/review_star_Image.png   
+    - assets/images/service_provider_image.png   
+    - assets/images/service_provier_profile_image.png   
 
 
     

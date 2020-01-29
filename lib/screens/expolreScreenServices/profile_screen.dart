@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shundor_go/screens/profileItemScreens/account_details_screen.dart';
 import 'package:shundor_go/screens/profileItemScreens/location_screen.dart';
+import 'package:shundor_go/screens/profileItemScreens/review_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -148,7 +149,8 @@ class ProfileScreen extends StatelessWidget {
                             Icons.arrow_forward_ios,
                             color: Colors.grey,
                           ),
-                          onPressed: null,
+                          onPressed: () => Navigator.of(context)
+                              .pushNamed(ReviewScreen.routeName),
                         ),
                       ),
                     )

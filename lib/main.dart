@@ -8,8 +8,11 @@ import 'package:shundor_go/screens/authentication_screens/on_bording_screens.dar
 // import './screens/fifth_onbording_screen.dart';
 import 'package:shundor_go/screens/authentication_screens/fifth_onbording_screen.dart';
 import 'package:shundor_go/screens/authentication_screens/welcome_screen.dart';
+import 'package:shundor_go/screens/expolreScreenServices/service_provider_profile_screen.dart';
+import 'package:shundor_go/screens/expolreScreenServices/service_provider_screen.dart';
 import 'package:shundor_go/screens/profileItemScreens/account_details_screen.dart';
 import 'package:shundor_go/screens/profileItemScreens/location_screen.dart';
+import 'package:shundor_go/screens/profileItemScreens/review_screen.dart';
 import 'package:shundor_go/signUp/mobile_sign_up_screen.dart';
 import 'package:shundor_go/screens/explore/woman_explore_screen.dart';
 // import './screens/last_on_bording_screen.dart';
@@ -37,6 +40,10 @@ void main() => runApp(MaterialApp(
             ManicurePadicureHostScreen(),
         AccountDetailsScreen.routeName: (ctx) => AccountDetailsScreen(),
         LocationScreen.routeName: (ctx) => LocationScreen(),
+        ReviewScreen.routeName: (ctx) => ReviewScreen(),
+        ServiceProvidersScreen.routeName: (ctx) => ServiceProvidersScreen(),
+        ServiceProviderProfileScreen.routeName: (ctx) =>
+            ServiceProviderProfileScreen(),
       },
     ));
 
