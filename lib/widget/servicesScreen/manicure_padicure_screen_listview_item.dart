@@ -5,12 +5,15 @@ class ManicurePadicureScreenListviewItem extends StatelessWidget {
   final String tile;
   final String cost;
   final String duration;
+  final double height;
+  final double width;
 
-  ManicurePadicureScreenListviewItem({this.tile, this.cost, this.duration});
+  ManicurePadicureScreenListviewItem(
+      {this.tile, this.cost, this.duration, this.height, this.width});
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 5, bottom: 5),
+      margin: EdgeInsets.only(top: 3, bottom: 3),
       child: Card(
         elevation: 5,
         child: Padding(
@@ -26,7 +29,7 @@ class ManicurePadicureScreenListviewItem extends StatelessWidget {
                   flex: 60,
                 ),
                 Expanded(
-                  flex: 40,
+                  flex: 45,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
@@ -50,7 +53,7 @@ class ManicurePadicureScreenListviewItem extends StatelessWidget {
                             .pushNamed(ServiceProvidersScreen.routeName),
                         child: Container(
                           height: 40,
-                          width: 80,
+                          width: width * 0.2,
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle, color: Colors.black),
                           child: Center(

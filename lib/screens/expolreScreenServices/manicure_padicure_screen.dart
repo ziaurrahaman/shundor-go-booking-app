@@ -3,6 +3,9 @@ import 'package:shundor_go/dummyData/manicure_padicure_sceen_listview_dummy_data
 import 'package:shundor_go/widget/servicesScreen/manicure_padicure_screen_listview_item.dart';
 
 class ManicurePadicureScreen extends StatelessWidget {
+  final double height;
+  final double width;
+  ManicurePadicureScreen(this.height, this.width);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,6 +17,8 @@ class ManicurePadicureScreen extends StatelessWidget {
             cost: MANICURE_PADICURE_LISTVIEW_DUMMY_DATA[index].serviceCost,
             duration:
                 MANICURE_PADICURE_LISTVIEW_DUMMY_DATA[index].serviceDuration,
+            height: height,
+            width: width,
           ),
         ),
       ),

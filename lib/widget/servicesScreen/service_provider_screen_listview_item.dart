@@ -8,6 +8,8 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
   final String noOfOrderCompleted;
   final String serviceCost;
   final String serviceDuration;
+  final double height;
+  final double width;
 
   ServiceProviderScreenListviewItem(
       {this.imagePath,
@@ -15,19 +17,21 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
       this.ratings,
       this.noOfOrderCompleted,
       this.serviceCost,
-      this.serviceDuration});
+      this.serviceDuration,
+      this.height,
+      this.width});
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
       child: Container(
-          padding: EdgeInsets.only(left: 8, right: 8),
+          padding: EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Expanded(flex: 15, child: Image.asset(imagePath)),
               Expanded(
-                flex: 45,
+                flex: 40,
                 child: InkWell(
                   onTap: () => Navigator.of(context)
                       .pushNamed(ServiceProviderProfileScreen.routeName),
@@ -62,7 +66,7 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 30,
+                flex: 35,
                 child: Row(
                   children: <Widget>[
                     Column(
@@ -79,15 +83,21 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
                       width: 5,
                     ),
                     Container(
-                      height: 40,
-                      width: 80,
+                      padding: EdgeInsets.only(left: width * 0.02),
+                      height: 45,
+                      width: width * 0.2,
                       decoration: BoxDecoration(
                           shape: BoxShape.rectangle, color: Colors.black),
                       child: Center(
-                        child: Text(
-                          'BOOK',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.white),
+                        child: Padding(
+                          padding: EdgeInsets.only(right: width * 0.009),
+                          child: Text(
+                            'BOOK',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
                         ),
                       ),
                     )

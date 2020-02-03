@@ -15,6 +15,7 @@ class MobileSignUPScreen extends StatefulWidget {
 
 class _MobileSignUPScreenState extends State<MobileSignUPScreen> {
   bool isNumberVerified = false;
+
   var _countryCodes = [
     '+ 94',
     '+91',

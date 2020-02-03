@@ -15,12 +15,7 @@ class BothExploreScreen extends StatefulWidget {
 
 class _BothExploreScreenState extends State<BothExploreScreen> {
   int _selectedIndex = 0;
-  var bottomNavigationScreens = [
-    BothExploreContentScreen(),
-    BookingScreen(),
-    TransactionsScreen(),
-    ProfileScreen(),
-  ];
+
   var appbarTitle = [
     ExploreScreenTitle(),
     Text(
@@ -75,6 +70,17 @@ class _BothExploreScreenState extends State<BothExploreScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height -
+        AppBar().preferredSize.height -
+        MediaQuery.of(context).padding.top -
+        56.0;
+    double width = MediaQuery.of(context).size.width;
+    var bottomNavigationScreens = [
+      BothExploreContentScreen(height, width),
+      BookingScreen(),
+      TransactionsScreen(),
+      ProfileScreen(),
+    ];
     return Scaffold(
       appBar: showOrHideAppbar(),
       body: bottomNavigationScreens[_selectedIndex],

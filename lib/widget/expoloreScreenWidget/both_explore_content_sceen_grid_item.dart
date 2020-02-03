@@ -11,7 +11,8 @@ class BothExporeSceenGridItem extends StatelessWidget {
     return InkWell(
       onTap: null,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Material(

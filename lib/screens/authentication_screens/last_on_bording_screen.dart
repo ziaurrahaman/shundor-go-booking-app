@@ -7,6 +7,8 @@ class LastOnBordingScreen extends StatelessWidget {
   static const routeName = '/last_onbording_screen';
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -82,7 +84,7 @@ class LastOnBordingScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () => Navigator.of(context)
-                          .pushNamed(BothExploreScreen.routeName),
+                          .pushNamed(WomanExploreScreen.routeName),
                       child: Container(
                         margin: EdgeInsets.only(left: 16, right: 16),
                         padding: EdgeInsets.all(16),
@@ -101,7 +103,7 @@ class LastOnBordingScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () => Navigator.of(context)
-                          .pushNamed(BothExploreScreen.routeName),
+                          .pushNamed(WomanExploreScreen.routeName),
                       child: Container(
                         margin: EdgeInsets.only(left: 16, right: 16),
                         padding: EdgeInsets.all(16),

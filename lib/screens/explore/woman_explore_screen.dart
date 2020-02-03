@@ -15,12 +15,7 @@ class WomanExploreScreen extends StatefulWidget {
 
 class _WomanExploreScreenState extends State<WomanExploreScreen> {
   int _selectedIndex = 0;
-  var bottomNavigationScreens = [
-    WomanExploreScreenContent(),
-    BookingScreen(),
-    TransactionsScreen(),
-    ProfileScreen(),
-  ];
+
   var appbarTitle = [
     ExploreScreenTitle(),
     Text(
@@ -74,6 +69,20 @@ class _WomanExploreScreenState extends State<WomanExploreScreen> {
 
   @override
   Widget build(BuildContext context) {
+// ... set key field of widget
+
+    double heigt = MediaQuery.of(context).size.height -
+        AppBar().preferredSize.height -
+        MediaQuery.of(context).padding.top -
+        56.0;
+    double width = MediaQuery.of(context).size.width;
+    var bottomNavigationScreens = [
+      WomanExploreScreenContent(heigt, width),
+      BookingScreen(),
+      TransactionsScreen(),
+      ProfileScreen(),
+    ];
+
     return Scaffold(
       appBar: showOrHideAppbar(),
       body: bottomNavigationScreens[_selectedIndex],

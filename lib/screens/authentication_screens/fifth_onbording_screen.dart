@@ -88,7 +88,7 @@ class FifthOnbordingScreen extends StatelessWidget {
                     height: 16,
                   ),
                   Text(
-                    'NOt NOW',
+                    'NOT NOW',
                     style: TextStyle(color: Colors.white),
                   )
                 ],

@@ -28,21 +28,26 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final appbar = AppBar(
+      backgroundColor: Colors.white,
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back_ios),
+        color: Colors.black,
+        onPressed: () => Navigator.of(context).pop(),
+      ),
+      title: const Text(
+        'Enter your code',
+        style: TextStyle(
+            color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+      ),
+    );
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height -
+        appbar.preferredSize.height -
+        MediaQuery.of(context).padding.top;
     final mobileNumber = ModalRoute.of(context).settings.arguments as String;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          color: Colors.black,
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: const Text(
-          'Enter your code',
-          style: TextStyle(
-              color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-      ),
+      appBar: appbar,
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,7 +57,11 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
           //   height: 16,
           // ),
           Container(
-            padding: EdgeInsets.all(18),
+            padding: EdgeInsets.only(
+                left: width * 0.02,
+                right: width * 0.02,
+                top: height * 0.02,
+                bottom: height * 0.02),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -63,7 +72,7 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
                   size: 24,
                 ),
                 SizedBox(
-                  width: 10,
+                  width: width * 0.01,
                 ),
                 Text(
                   mobileNumber,
@@ -76,7 +85,11 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(14),
+            margin: EdgeInsets.only(
+                left: width * 0.02,
+                right: width * 0.02,
+                top: height * 0.02,
+                bottom: height * 0.02),
             // margin: EdgeInsets.only(left: 16),
             // padding: EdgeInsets.only(left: 0, right: 0),
             // margin: EdgeInsets.only(left: 16, right: 0),
@@ -99,7 +112,8 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
               autofocus: true,
               pinBoxWidth: 50,
               pinBoxHeight: 50,
-              pinBoxOuterPadding: EdgeInsets.only(left: 8, right: 8),
+              pinBoxOuterPadding:
+                  EdgeInsets.only(left: width * 0.002, right: width * 0.002),
               pinBoxColor: const Color(
                 0xFFe0e0e0,
               ),
@@ -109,11 +123,11 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
             ),
           ),
           isPinGiven
-              ? SignUpPageActiveContinueButton()
-              : SignUpPageInactiveContinueButton(),
+              ? SignUpPageActiveContinueButton(height, width)
+              : SignUpPageInactiveContinueButton(height, width),
           InkWell(
             child: Container(
-              margin: EdgeInsets.only(top: 8),
+              margin: EdgeInsets.only(top: height * 0.02),
               child: Center(
                 child: Text(
                   'I didn\'t get a code',
@@ -125,7 +139,8 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(12),
+            padding: EdgeInsets.only(
+                left: width * 0.02, top: width * 0.01, right: width * 0.02),
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(

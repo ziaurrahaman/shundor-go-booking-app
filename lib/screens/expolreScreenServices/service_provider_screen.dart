@@ -5,53 +5,60 @@ import 'package:shundor_go/widget/servicesScreen/service_provider_screen_listvie
 
 class ServiceProvidersScreen extends StatelessWidget {
   static const routeName = 'service_provider_screen';
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.white,
-          ),
-          onPressed: null,
-        ),
-        title: Column(
+  final appBar = AppBar(
+    backgroundColor: Colors.black,
+    leading: IconButton(
+      icon: Icon(
+        Icons.arrow_back_ios,
+        color: Colors.white,
+      ),
+      onPressed: null,
+    ),
+    title: Column(
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(left: 2),
-                  child: Text(
-                    'Find Service at',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(color: Colors.white, fontSize: 10),
-                  ),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(left: 2),
+              child: Text(
+                'Find Service at',
+                textAlign: TextAlign.start,
+                style: TextStyle(color: Colors.white, fontSize: 10),
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Icon(
-                  Icons.location_on,
-                  color: Colors.white,
-                  size: 16,
-                ),
-                Text(
-                  'Bashundhara R\/A',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                )
-              ],
-            )
           ],
         ),
-      ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Icon(
+              Icons.location_on,
+              color: Colors.white,
+              size: 16,
+            ),
+            Text(
+              'Bashundhara R\/A',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            )
+          ],
+        )
+      ],
+    ),
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height -
+        appBar.preferredSize.height -
+        MediaQuery.of(context).padding.top;
+    final double width = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+      appBar: appBar,
       body: ListView.builder(
         itemCount: SERVICE_PROVIDER_SCREEN_LISTVIEW_DUMMY_DATA.length,
         itemBuilder: (ctx, index) => ServiceProviderScreenListviewItem(
@@ -67,6 +74,8 @@ class ServiceProvidersScreen extends StatelessWidget {
               SERVICE_PROVIDER_SCREEN_LISTVIEW_DUMMY_DATA[index].serviceCost,
           serviceDuration: SERVICE_PROVIDER_SCREEN_LISTVIEW_DUMMY_DATA[index]
               .serviceDuration,
+          height: height,
+          width: width,
         ),
       ),
     );

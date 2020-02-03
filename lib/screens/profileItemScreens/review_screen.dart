@@ -4,42 +4,49 @@ import 'package:shundor_go/widget/bottomNavigationWidget/review_screen_listview_
 
 class ReviewScreen extends StatelessWidget {
   static const routeName = 'review_screen';
+  final appBar = AppBar(
+    backgroundColor: Colors.black,
+    title: Text(
+      'Reviews',
+      style: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+    ),
+    centerTitle: true,
+    leading: IconButton(
+      icon: Icon(
+        Icons.arrow_back_ios,
+        color: Colors.white,
+      ),
+      onPressed: null,
+    ),
+  );
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height -
+        MediaQuery.of(context).padding.top -
+        appBar.preferredSize.height;
+    final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text(
-          'Reviews',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.white,
-          ),
-          onPressed: null,
-        ),
-      ),
+      appBar: appBar,
       body: Container(
         child: SafeArea(
           child: ListView.builder(
             itemCount: REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA.length,
             itemBuilder: (ctx, index) => ReviewScreenListviewItem(
-                imagePath:
-                    REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].userImagePath,
-                serviceProvider:
-                    REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].serviceProvider,
-                serviceTitle:
-                    REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].serviceTitle,
-                numberOfStar:
-                    REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].numberOfStar,
-                review: REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].review),
+              imagePath: REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].userImagePath,
+              serviceProvider:
+                  REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].serviceProvider,
+              serviceTitle:
+                  REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].serviceTitle,
+              numberOfStar:
+                  REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].numberOfStar,
+              review: REVIEW_SCEEEN_LISTVIEW_DUMMY_DATA[index].review,
+              height: height,
+              width: width,
+            ),
           ),
         ),
       ),

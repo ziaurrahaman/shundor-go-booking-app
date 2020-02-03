@@ -3,6 +3,9 @@ import 'package:shundor_go/dummyData/facial_and_skin_treatment_listview_dummy_da
 import 'package:shundor_go/widget/servicesScreen/facial_and_screen_treatment_listview_item.dart';
 
 class FacialAndSkinTreatmentScreen extends StatelessWidget {
+  final double height;
+  final double width;
+  FacialAndSkinTreatmentScreen(this.height, this.width);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,6 +19,8 @@ class FacialAndSkinTreatmentScreen extends StatelessWidget {
                 .serviceCost,
             duration: FACIAL_AND_SKIN_TREATMENT_LISTVIEW_DUMMY_DATA[index]
                 .serviceDuration,
+            height: height,
+            width: width,
           ),
         ),
       ),
