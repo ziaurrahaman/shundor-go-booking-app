@@ -8,6 +8,12 @@ import 'package:shundor_go/screens/authentication_screens/on_bording_screens.dar
 // import './screens/fifth_onbording_screen.dart';
 import 'package:shundor_go/screens/authentication_screens/fifth_onbording_screen.dart';
 import 'package:shundor_go/screens/authentication_screens/welcome_screen.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/add_address.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/add_location_screen.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/booking_summary_screen.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/location_founded_by_google_screen.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/placement_screen.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/shedule_services_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/service_provider_profile_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/service_provider_screen.dart';
 import 'package:shundor_go/screens/profileItemScreens/account_details_screen.dart';
@@ -23,6 +29,7 @@ import 'package:shundor_go/screens/expolreScreenServices/service_host_screen.dar
 import 'package:shundor_go/screens/expolreScreenServices/manicure_padicure_host_screen.dart';
 
 void main() => runApp(MaterialApp(
+      theme: ThemeData(primaryColor: Colors.black),
       home: SplashScreen(),
       routes: {
         WelcomeScreen.routeName: (ctx) => WelcomeScreen(),
@@ -44,6 +51,13 @@ void main() => runApp(MaterialApp(
         ServiceProvidersScreen.routeName: (ctx) => ServiceProvidersScreen(),
         ServiceProviderProfileScreen.routeName: (ctx) =>
             ServiceProviderProfileScreen(),
+        SheduleServicesScreen.routeName: (ctx) => SheduleServicesScreen(),
+        AddAddressScreen.routeName: (ctx) => AddAddressScreen(),
+        AddLocationScreen.routeName: (ctx) => AddLocationScreen(),
+        LocationFoundedByGoogleScreen.routeName: (ctx) =>
+            LocationFoundedByGoogleScreen(),
+        BookingSummaryScreen.routeName: (ctx) => BookingSummaryScreen(),
+        PaymentScreen.routeName: (ctx) => PaymentScreen(),
       },
     ));
 

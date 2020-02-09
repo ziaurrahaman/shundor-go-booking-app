@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shundor_go/screens/bookingProcedureScreens/shedule_services_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/service_provider_profile_screen.dart';
 
 class ServiceProviderScreenListviewItem extends StatelessWidget {
@@ -82,21 +83,25 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    Container(
-                      padding: EdgeInsets.only(left: width * 0.02),
-                      height: 45,
-                      width: width * 0.2,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.rectangle, color: Colors.black),
-                      child: Center(
-                        child: Padding(
-                          padding: EdgeInsets.only(right: width * 0.009),
-                          child: Text(
-                            'BOOK',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                    InkWell(
+                      onTap: () => Navigator.of(context)
+                          .pushNamed(SheduleServicesScreen.routeName),
+                      child: Container(
+                        padding: EdgeInsets.only(left: width * 0.02),
+                        height: 45,
+                        width: width * 0.2,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.rectangle, color: Colors.black),
+                        child: Center(
+                          child: Padding(
+                            padding: EdgeInsets.only(right: width * 0.009),
+                            child: Text(
+                              'BOOK',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
                       ),
