@@ -4,27 +4,28 @@ import 'package:shundor_go/widget/bottomNavigationWidget/review_screen_listview_
 
 class ReviewScreen extends StatelessWidget {
   static const routeName = 'review_screen';
-  final appBar = AppBar(
-    backgroundColor: Colors.black,
-    title: Text(
-      'Reviews',
-      style: TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-        color: Colors.white,
-      ),
-    ),
-    centerTitle: true,
-    leading: IconButton(
-      icon: Icon(
-        Icons.arrow_back_ios,
-        color: Colors.white,
-      ),
-      onPressed: null,
-    ),
-  );
+
   @override
   Widget build(BuildContext context) {
+    final appBar = AppBar(
+      backgroundColor: Colors.black,
+      title: Text(
+        'Reviews',
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+      centerTitle: true,
+      leading: IconButton(
+        icon: Icon(
+          Icons.arrow_back_ios,
+          color: Colors.white,
+        ),
+        onPressed: () => Navigator.of(context).pop(),
+      ),
+    );
     final double height = MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top -
         appBar.preferredSize.height;

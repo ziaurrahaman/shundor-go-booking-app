@@ -3,8 +3,8 @@ import 'package:shundor_go/screens/expolreScreenServices/salon_at_home_sceen.dar
 import 'package:shundor_go/screens/expolreScreenServices/spa_at_home_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/make_up.dart';
 
-import 'package:shundor_go/dummyData/make_up_screen_listview_dummy_data.dart';
-import 'package:shundor_go/widget/servicesScreen/make_up_screen_listview_item.dart';
+// import 'package:shundor_go/dummyData/make_up_screen_listview_dummy_data.dart';
+// import 'package:shundor_go/widget/servicesScreen/make_up_screen_listview_item.dart';
 
 class ServiceHostScreen extends StatefulWidget {
   static const routeName = 'service_host_screen';
@@ -14,39 +14,48 @@ class ServiceHostScreen extends StatefulWidget {
 }
 
 class _ServiceHostScreen extends State<ServiceHostScreen> {
-  var index = 0;
+  int args;
   final List<MyTabs> _tabs = [
     MyTabs('Salon At Home'),
     MyTabs('Spa At Home'),
     MyTabs('MakeUp'),
     MyTabs('Bridal Makeup'),
+    MyTabs('Hair Styling'),
+    MyTabs('Hands and Fit'),
+    MyTabs('Massage'),
+    MyTabs('Event Services'),
+    MyTabs('HairCut and Color'),
+    MyTabs('MakeUp'),
   ];
 
-  void _setAppBarTitle(int indexofTab) {
+  void _setAppBarTitle(int index) {
     setState(() {
-      index = indexofTab;
+      args = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    args = ModalRoute.of(context).settings.arguments as int;
+
     return DefaultTabController(
-      length: 4,
+      initialIndex: args,
+      length: 10,
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            _tabs[index].title,
+            _tabs[args].title,
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           backgroundColor: Colors.black,
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.white,
             ),
-            onPressed: null,
+            onPressed: () => Navigator.of(context).pop(),
           ),
           bottom: PreferredSize(
             child: TabBar(
@@ -56,20 +65,38 @@ class _ServiceHostScreen extends State<ServiceHostScreen> {
               indicatorColor: Colors.white,
               tabs: <Widget>[
                 Tab(
-                  child: Text('Salon At Home'),
+                  child: const Text('Salon At Home'),
                 ),
                 Tab(
-                  child: Text('Spa At Home'),
+                  child: const Text('Spa At Home'),
                 ),
                 Tab(
-                  child: Text('MakeUp'),
+                  child: const Text('MakeUp'),
                 ),
                 Tab(
-                  child: Text('Bridal MakeUp'),
-                )
+                  child: const Text('Bridal MakeUp'),
+                ),
+                Tab(
+                  child: const Text('Hair Styling'),
+                ),
+                Tab(
+                  child: const Text('Hands and Fit'),
+                ),
+                Tab(
+                  child: const Text('Massage'),
+                ),
+                Tab(
+                  child: const Text('Event Services'),
+                ),
+                Tab(
+                  child: const Text('HairCut and Color'),
+                ),
+                Tab(
+                  child: const Text('MakeUp'),
+                ),
               ],
             ),
-            preferredSize: Size.fromHeight(30.0),
+            preferredSize: const Size.fromHeight(30.0),
           ),
           // actions: <Widget>[],
         ),
@@ -80,9 +107,35 @@ class _ServiceHostScreen extends State<ServiceHostScreen> {
             MakeUpScreen(),
             Container(
               child: Center(
-                child: Text('Bridal MakeUp'),
+                child: const Text('Bridal MakeUp'),
               ),
             ),
+            Container(
+              child: Center(
+                child: const Text('Hair Styling'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Hands and Fit'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Massage'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Event Services'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('HairCut and Color'),
+              ),
+            ),
+            MakeUpScreen(),
           ],
         ),
       ),

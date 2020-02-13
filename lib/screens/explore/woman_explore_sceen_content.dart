@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shundor_go/dummyData/dummy_data_for_woma_explore_screen_listview_with_icon.dart';
+// import 'package:shundor_go/dummyData/dummy_grid_data.dart';
+// import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_content_sceen_grid_item.dart';
 import 'package:shundor_go/widget/womanExploreScreenWidget/woman_explore_sceen_listview_item_with_icon.dart';
 import 'package:shundor_go/dummyData/popular_offer_list_for_woman_dummy_data.dart';
 import 'package:shundor_go/widget/womanExploreScreenWidget/popular_offer_for_woman_list_item.dart';
@@ -91,12 +93,112 @@ class _WomanExploreScreenContentState extends State<WomanExploreScreenContent> {
     //     )
     //   ],
     // );
+    // final isLandscape =
+    //     MediaQuery.of(context).orientation == Orientation.landscape;
 
+    // return isLandscape
+    //     ? Column(
+    //         children: <Widget>[
+    //           Container(
+    //               height: height * 1,
+    //               padding: EdgeInsets.only(top: 20),
+    //               child: GridView.builder(
+    //                 padding: EdgeInsets.all(8),
+    //                 itemCount: MAINEXPLORE_SCREEN_GRIDS.length,
+    //                 itemBuilder: (ctx, index) => BothExporeSceenGridItem(
+    //                     MAINEXPLORE_SCREEN_GRIDS[index].title,
+    //                     MAINEXPLORE_SCREEN_GRIDS[index].gridImagePath),
+    //                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    //                   crossAxisCount: 5,
+    //                   childAspectRatio: 1.8,
+    //                   crossAxisSpacing: 0,
+    //                   mainAxisSpacing: 0,
+    //                 ),
+    //               ))
+    // //         // Image.asset(
+    // //         //   'assets/images/threading_image.png',
+    // //         //   fit: BoxFit.contain,
+    // //         //   height: 48,
+    // //         //   width: 48,
+    // //         // ),
+    // //         ),
+    // Container(
+    //   height: height * 0.20,
+    //   padding: EdgeInsets.only(left: 8),
+    //   child: ListView.builder(
+    //     itemExtent: 105,
+    //     scrollDirection: Axis.horizontal,
+    //     itemCount: WOMAN_EXPLORE_SCREEN_LISTS_WITH_ICON_DATA.length,
+    //     itemBuilder: (ctx, index) =>
+    //         WomanExploreScreenListItemWithIcon(
+    //       WOMAN_EXPLORE_SCREEN_LISTS_WITH_ICON_DATA[index].title,
+    //       WOMAN_EXPLORE_SCREEN_LISTS_WITH_ICON_DATA[index]
+    //           .gridImagePath,
+    //       index,
+    //     ),
+    //   ),
+    // ),
+    // Container(
+    //   height: height * 0.25,
+    //   child: Row(
+    //     mainAxisAlignment: MainAxisAlignment.start,
+    //     children: <Widget>[
+    //       Padding(
+    //         padding: const EdgeInsets.only(left: 5),
+    //         child: Image.asset(
+    //           'assets/images/experience_shundorgo_image.png',
+    //           fit: BoxFit.cover,
+    //           width: width * 0.98,
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // ),
+    // Container(
+    //   height: height * 0.05,
+    //   child: Row(
+    //     crossAxisAlignment: CrossAxisAlignment.end,
+    //     mainAxisAlignment: MainAxisAlignment.start,
+    //     children: <Widget>[
+    //       Container(
+    //         padding: EdgeInsets.only(left: 18, top: height * 0.01),
+    //         child: Text(
+    //           'Popular Offers For You',
+    //           textAlign: TextAlign.center,
+    //           style: TextStyle(
+    //               fontSize: 18,
+    //               fontWeight: FontWeight.bold,
+    //               color: Colors.black),
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // ),
+    // Container(
+    //   padding: EdgeInsets.only(top: height * 0.02),
+    //   height: height * 0.70,
+    //   child: ListView.builder(
+    //     scrollDirection: Axis.horizontal,
+    //     itemCount: POPULAR_OFFER_FOR_WOMAN_LIST_DUMMY_DAT.length,
+    //     itemBuilder: (ctx, index) =>
+    //         WomanExploreScreenPopularOfferListItem(
+    //             imagePath:
+    //                 POPULAR_OFFER_FOR_WOMAN_LIST_DUMMY_DAT[index]
+    //                     .popularOfferListImagePath,
+    //             title: POPULAR_OFFER_FOR_WOMAN_LIST_DUMMY_DAT[index]
+    //                 .popularOfferListTitle,
+    //             cost: POPULAR_OFFER_FOR_WOMAN_LIST_DUMMY_DAT[index]
+    //                 .popularOfferListServiceCost),
+    //   ),
+    // ),
+    //     ],
+    //   )
+    // :
     return Column(
       children: <Widget>[
         Container(
           height: height * 0.25,
-          padding: EdgeInsets.only(left: 8),
+          padding: const EdgeInsets.only(left: 8),
           child: ListView.builder(
             itemExtent: 105,
             scrollDirection: Axis.horizontal,
@@ -132,7 +234,7 @@ class _WomanExploreScreenContentState extends State<WomanExploreScreenContent> {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.only(left: 18, top: height * 0.01),
-                child: Text(
+                child: const Text(
                   'Popular Offers For You',
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -146,7 +248,7 @@ class _WomanExploreScreenContentState extends State<WomanExploreScreenContent> {
         ),
         Container(
           padding: EdgeInsets.only(top: height * 0.02),
-          height: height * 0.45,
+          height: height * 0.44,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: POPULAR_OFFER_FOR_WOMAN_LIST_DUMMY_DAT.length,

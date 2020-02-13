@@ -20,97 +20,6 @@ class _BothExploreContentScreenState extends State<BothExploreContentScreen> {
   _BothExploreContentScreenState(this.heigth, this.width);
   @override
   Widget build(BuildContext context) {
-    // return Column(
-    //   children: <Widget>[
-    //     Expanded(
-    //       flex: 2,
-    //       child: Row(
-    //         crossAxisAlignment: CrossAxisAlignment.end,
-    //         mainAxisAlignment: MainAxisAlignment.start,
-    //         children: <Widget>[
-    //           Container(
-    //             padding: EdgeInsets.only(
-    //               top: 15,
-    //               left: 15,
-    //             ),
-    //             child: Text(
-    //               'Discover Our Services',
-    //               textAlign: TextAlign.center,
-    //               style: TextStyle(
-    //                   fontSize: 20,
-    //                   fontWeight: FontWeight.bold,
-    //                   color: Colors.black),
-    //             ),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //     Expanded(
-    //         flex: 8,
-    //         child: Container(
-    //             padding: EdgeInsets.only(top: 20),
-    //             child: GridView.builder(
-    //               padding: EdgeInsets.all(8),
-    //               itemCount: MAINEXPLORE_SCREEN_GRIDS.length,
-    //               itemBuilder: (ctx, index) => BothExporeSceenGridItem(
-    //                   MAINEXPLORE_SCREEN_GRIDS[index].title,
-    //                   MAINEXPLORE_SCREEN_GRIDS[index].gridImagePath),
-    //               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    //                 crossAxisCount: 5,
-    //                 childAspectRatio: 1,
-    //                 crossAxisSpacing: 10,
-    //                 mainAxisSpacing: 10,
-    //               ),
-    //             ))
-    //         // Image.asset(
-    //         //   'assets/images/threading_image.png',
-    //         //   fit: BoxFit.contain,
-    //         //   height: 48,
-    //         //   width: 48,
-    //         // ),
-    //         ),
-    //     Expanded(
-    //       flex: 2,
-    //       child: Row(
-    //         crossAxisAlignment: CrossAxisAlignment.end,
-    //         mainAxisAlignment: MainAxisAlignment.start,
-    //         children: <Widget>[
-    //           Container(
-    //             padding: EdgeInsets.only(top: 15, left: 15, bottom: 15),
-    //             child: Text(
-    //               'Popular Offers For You',
-    //               textAlign: TextAlign.center,
-    //               style: TextStyle(
-    //                   fontSize: 18,
-    //                   fontWeight: FontWeight.bold,
-    //                   color: Colors.black),
-    //             ),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //     Expanded(
-    //       flex: 10,
-    //       child: ListView.builder(
-    //         scrollDirection: Axis.horizontal,
-    //         itemCount: MAINEXPLORE_CONTENT_SCREEN_LIST.length,
-    //         itemBuilder: (ctx, index) =>
-    //             ExploreContentScreenPopularOfferListItem(
-    //                 imagePath: MAINEXPLORE_CONTENT_SCREEN_LIST[index]
-    //                     .popularOfferListImagePath,
-    //                 title: MAINEXPLORE_CONTENT_SCREEN_LIST[index]
-    //                     .popularOfferListTitle,
-    //                 cost: MAINEXPLORE_CONTENT_SCREEN_LIST[index]
-    //                     .popularOfferListServiceCost),
-    //       ),
-    //       // child: Image.asset(
-    //       //   'assets/images/threading_image.png',
-    //       //   fit: BoxFit.cover,
-    //       // ),
-    //     )
-    //   ],
-    // );
-
     return Column(children: <Widget>[
       Container(
         height: heigth * 0.08,
@@ -119,11 +28,11 @@ class _BothExploreContentScreenState extends State<BothExploreContentScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 15,
                 left: 15,
               ),
-              child: Text(
+              child: const Text(
                 'Discover Our Services',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -138,9 +47,9 @@ class _BothExploreContentScreenState extends State<BothExploreContentScreen> {
 
       Container(
           height: heigth * 0.35,
-          padding: EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.only(top: 20),
           child: GridView.builder(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             itemCount: MAINEXPLORE_SCREEN_GRIDS.length,
             itemBuilder: (ctx, index) => BothExporeSceenGridItem(
                 MAINEXPLORE_SCREEN_GRIDS[index].title,
@@ -152,12 +61,6 @@ class _BothExploreContentScreenState extends State<BothExploreContentScreen> {
               mainAxisSpacing: 00,
             ),
           )),
-      // Image.asset(
-      //   'assets/images/threading_image.png',
-      //   fit: BoxFit.contain,
-      //   height: 48,
-      //   width: 48,
-      // ),
 
       Container(
         height: heigth * 0.08,

@@ -16,6 +16,11 @@ class _ManicurePadicureHostScreenState
   final List<MyTabs> _tabs = [
     MyTabs('MANICURE PADICURE'),
     MyTabs('FACIAL AND SKIN TREATMENT'),
+    MyTabs('HAIR TREATMENT'),
+    MyTabs('BRIGHTENING AND FAIR POLISH'),
+    MyTabs('WAXING AND HAIR REMOVAL'),
+    MyTabs('THREADING AND ADD ONS'),
+    MyTabs('HAIR CUT'),
   ];
   void _setAppBarTitle(int indexofTab) {
     setState(() {
@@ -25,20 +30,21 @@ class _ManicurePadicureHostScreenState
 
   @override
   Widget build(BuildContext context) {
+    var args = ModalRoute.of(context).settings.arguments as int;
     appBar = AppBar(
       centerTitle: true,
       title: Text(
-        _tabs[index].title,
+        _tabs[args].title,
         style: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
       ),
       backgroundColor: Colors.black,
       leading: IconButton(
-        icon: Icon(
+        icon: const Icon(
           Icons.arrow_back_ios,
           color: Colors.white,
         ),
-        onPressed: null,
+        onPressed: () => Navigator.of(context).pop(),
       ),
       bottom: PreferredSize(
         child: TabBar(
@@ -48,14 +54,29 @@ class _ManicurePadicureHostScreenState
           indicatorColor: Colors.white,
           tabs: <Widget>[
             Tab(
-              child: Text('MANICURE PADICURE'),
+              child: const Text('MANICURE PADICURE'),
             ),
             Tab(
-              child: Text('FACIAL AND SKIN TREATMENT'),
+              child: const Text('FACIAL AND SKIN TREATMENT'),
+            ),
+            Tab(
+              child: const Text('HAIR TREATMENT'),
+            ),
+            Tab(
+              child: Text('BRIGHTENING AND FAIR POLISH'),
+            ),
+            Tab(
+              child: const Text('WAXING AND HAIR REMOVAL'),
+            ),
+            Tab(
+              child: const Text('THREADING AND ADD ONS'),
+            ),
+            Tab(
+              child: const Text('HAIR CUT'),
             ),
           ],
         ),
-        preferredSize: Size.fromHeight(30.0),
+        preferredSize: const Size.fromHeight(30.0),
       ),
     );
     double height = MediaQuery.of(context).size.height -
@@ -63,13 +84,39 @@ class _ManicurePadicureHostScreenState
         MediaQuery.of(context).padding.top;
     double width = MediaQuery.of(context).size.width;
     return DefaultTabController(
-      length: 2,
+      initialIndex: args,
+      length: 7,
       child: Scaffold(
         appBar: appBar,
         body: TabBarView(
           children: <Widget>[
             ManicurePadicureScreen(height, width),
             FacialAndSkinTreatmentScreen(height, width),
+            Container(
+              child: Center(
+                child: const Text('Hair Treatment'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Brightening ad Fair Polish'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Waxing and Hair Removal'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Threading and Add ons'),
+              ),
+            ),
+            Container(
+              child: Center(
+                child: const Text('Hair Cut'),
+              ),
+            ),
           ],
         ),
       ),

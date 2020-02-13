@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 // import '../screens/sign_up_with_code_first_screen.dart';
 import 'package:shundor_go/screens/authentication_screens/sign_up_with_code_first_screen.dart';
 
@@ -14,14 +14,14 @@ class ActiveUseSmsCodeButton extends StatelessWidget {
           SignUpWithCodeFirstScreen.routeName,
           arguments: mobileNumber),
       child: Container(
-        margin: EdgeInsets.only(left: 14, right: 10),
-        padding: EdgeInsets.all(16),
+        margin: const EdgeInsets.only(left: 14, right: 10),
+        padding: const EdgeInsets.all(16),
         decoration:
-            BoxDecoration(shape: BoxShape.rectangle, color: Colors.black),
+            const BoxDecoration(shape: BoxShape.rectangle, color: Colors.black),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Use SMS',
               style: TextStyle(
                   color: Colors.white,

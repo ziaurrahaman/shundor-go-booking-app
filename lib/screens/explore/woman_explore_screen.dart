@@ -3,7 +3,7 @@ import 'package:shundor_go/screens/explore/woman_explore_sceen_content.dart';
 import 'package:shundor_go/screens/expolreScreenServices/booking_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/profile_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/transactions_screen.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
+// import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
 import 'package:shundor_go/widget/expoloreScreenWidget/explore_screen_tilte.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -52,18 +52,18 @@ class _WomanExploreScreenState extends State<WomanExploreScreen> {
       );
     } else {
       return AppBar(
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            color: Colors.red,
-            onPressed: null,
-          )
-        ],
-        automaticallyImplyLeading: false,
-        centerTitle: isSelectedIndexGreaterThanZero(),
-        title: appbarTitle[_selectedIndex],
-        backgroundColor: const Color(0xFFD4AF37),
-      );
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              color: Colors.white,
+              onPressed: () => Navigator.of(context).pop(),
+            )
+          ],
+          automaticallyImplyLeading: false,
+          centerTitle: isSelectedIndexGreaterThanZero(),
+          title: appbarTitle[_selectedIndex],
+          // backgroundColor: const Color(0xFFD4AF37),
+          backgroundColor: Colors.black);
     }
   }
 
@@ -71,13 +71,13 @@ class _WomanExploreScreenState extends State<WomanExploreScreen> {
   Widget build(BuildContext context) {
 // ... set key field of widget
 
-    double heigt = MediaQuery.of(context).size.height -
+    double height = MediaQuery.of(context).size.height -
         AppBar().preferredSize.height -
         MediaQuery.of(context).padding.top -
         56.0;
     double width = MediaQuery.of(context).size.width;
     var bottomNavigationScreens = [
-      WomanExploreScreenContent(heigt, width),
+      WomanExploreScreenContent(height, width),
       BookingScreen(),
       TransactionsScreen(),
       ProfileScreen(),
@@ -101,27 +101,27 @@ class _WomanExploreScreenState extends State<WomanExploreScreen> {
             unselectedFontSize: 12,
             items: [
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.search,
                   ),
-                  title: Text('Explore')),
+                  title: const Text('Explore')),
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     MdiIcons.calendarMonthOutline,
                   ),
-                  title: Text(
+                  title: const Text(
                     'Booking',
                   )),
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     MdiIcons.formatAlignJustify,
                   ),
-                  title: Text('Transactions')),
+                  title: const Text('Transactions')),
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.person_outline,
                   ),
-                  title: Text('Profile')),
+                  title: const Text('Profile')),
             ]),
       ),
     );

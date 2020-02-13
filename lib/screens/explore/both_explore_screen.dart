@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shundor_go/screens/expolreScreenServices/profile_screen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/transactions_screen.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
+// import 'package:shundor_go/widget/expoloreScreenWidget/both_explore_screen_bottom_navigationbar.dart';
 import 'package:shundor_go/screens/explore/both_explore_content_screen.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:shundor_go/screens/expolreScreenServices/booking_screen.dart';
@@ -54,9 +54,9 @@ class _BothExploreScreenState extends State<BothExploreScreen> {
       return AppBar(
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             color: Colors.red,
-            onPressed: null,
+            onPressed: () => Navigator.of(context).pop(),
           )
         ],
         automaticallyImplyLeading: false,
@@ -99,27 +99,27 @@ class _BothExploreScreenState extends State<BothExploreScreen> {
             unselectedFontSize: 12,
             items: [
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.search,
                   ),
-                  title: Text('Explore')),
+                  title: const Text('Explore')),
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     MdiIcons.calendarMonthOutline,
                   ),
-                  title: Text(
+                  title: const Text(
                     'Booking',
                   )),
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     MdiIcons.formatAlignJustify,
                   ),
-                  title: Text('Transactions')),
+                  title: const Text('Transactions')),
               const BottomNavigationBarItem(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.person_outline,
                   ),
-                  title: Text('Profile')),
+                  title: const Text('Profile')),
             ]),
       ),
     );

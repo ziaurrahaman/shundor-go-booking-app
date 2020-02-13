@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/screens/authentication_screens/third_onbording_screen.dart';
-import 'package:shundor_go/screens/expolreScreenServices/salon_at_home_sceen.dart';
+// import 'package:shundor_go/screens/authentication_screens/third_onbording_screen.dart';
+// import 'package:shundor_go/screens/expolreScreenServices/salon_at_home_sceen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/manicure_padicure_host_screen.dart';
 
 class SalonAtHomeTopMostListviewItem extends StatelessWidget {
   final String serviceTitle;
+  final int index;
 
-  SalonAtHomeTopMostListviewItem(this.serviceTitle);
+  SalonAtHomeTopMostListviewItem(this.serviceTitle, this.index);
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () =>
-          Navigator.of(context).pushNamed(ManicurePadicureHostScreen.routeName),
+      onTap: () => Navigator.of(context)
+          .pushNamed(ManicurePadicureHostScreen.routeName, arguments: index),
       child: Card(
         elevation: 4,
         child: ListTile(

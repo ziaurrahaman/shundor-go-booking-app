@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shundor_go/widget/profileScreen/account_details_screen_item.dart';
 
 class AccountDetailsScreen extends StatelessWidget {
   static const routeName = 'account_details_screen';
@@ -6,290 +7,31 @@ class AccountDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Account Details',
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
-          onPressed: null,
+          onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: Colors.black,
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Name',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      'Shahruk Khan',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Phone Number',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      '+8801679714001',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Email',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      'ziaurrahaman939@gmail.com',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Gender',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      'Mail',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Date',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      '1/28/2020',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Facebook',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      'Connected',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              height: 85,
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
-                    child: Text(
-                      'Google',
-                      style: TextStyle(fontSize: 14, color: Colors.black),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 10),
-                    child: Text(
-                      'Connected',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 10,
-                          endIndent: 10,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            )
+            AccountDetailsScreenItem('Name', 'Shahruk Khan'),
+            AccountDetailsScreenItem('Phone Number', '+01679714001'),
+            AccountDetailsScreenItem('Email', 'ziaurrahaman939@gmail.com'),
+            AccountDetailsScreenItem('Gender', 'Mail'),
+            AccountDetailsScreenItem('Date', '2/13/2020'),
+            AccountDetailsScreenItem('Facebook', 'Connected'),
+            AccountDetailsScreenItem('Google', 'Connected'),
           ],
         ),
       ),

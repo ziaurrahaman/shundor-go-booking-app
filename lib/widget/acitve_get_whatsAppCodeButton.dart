@@ -14,21 +14,21 @@ class ActiveGetWhatsAppCodeButton extends StatelessWidget {
           SignUpWithCodeFirstScreen.routeName,
           arguments: mobileNumber),
       child: Container(
-        margin: EdgeInsets.only(left: 14, right: 10),
-        padding: EdgeInsets.all(14),
+        margin: const EdgeInsets.only(left: 14, right: 10),
+        padding: const EdgeInsets.all(14),
         decoration:
-            BoxDecoration(shape: BoxShape.rectangle, color: Colors.black),
+            const BoxDecoration(shape: BoxShape.rectangle, color: Colors.black),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(
+            const Icon(
               MdiIcons.whatsapp,
               color: Colors.white,
             ),
-            SizedBox(
+            const SizedBox(
               width: 8,
             ),
-            Text(
+            const Text(
               'Get a WhatsApp code',
               style: TextStyle(
                   color: Colors.white,

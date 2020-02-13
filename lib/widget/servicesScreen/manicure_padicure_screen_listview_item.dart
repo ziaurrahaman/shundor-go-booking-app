@@ -57,7 +57,7 @@ class ManicurePadicureScreenListviewItem extends StatelessWidget {
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle, color: Colors.black),
                           child: Center(
-                            child: Text(
+                            child: const Text(
                               'BOOK',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,

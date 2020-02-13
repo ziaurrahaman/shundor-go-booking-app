@@ -21,6 +21,35 @@ class ReviewScreenListviewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    // Widget yellowStar = Padding(
+    //   padding: EdgeInsets.only(left: width * 0.007, right: width * 0.007),
+    //   child: Image.asset('assets/images/review_star_Image.png'),
+    // );
+    // Widget goldenStar = Padding(
+    //   padding: EdgeInsets.only(left: width * 0.007, right: width * 0.007),
+    //   child: Image.asset('assets/images/review_star_Image.png'),
+
+    // );
+    //    Widget getTextWidgets(List<String> strings)
+    // {
+    //   List<Widget> list = new List<Widget>();
+    //   for(var i = 0; i < strings.length; i++){
+    //       list.add(new Text(strings[i]));
+    //   }
+    //   return new Row(children: list);
+    // }
+    Widget returnStars(int numberOfStarsToDraw) {
+      List<Widget> stars = new List<Widget>();
+      // return Image.asset('assets/images/review_star_Image.png');
+      for (int i = 0; i < numberOfStarsToDraw; i++) {
+        stars.add(Image.asset('assets/images/review_star_Image.png'));
+      }
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: stars,
+      );
+    }
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
@@ -62,7 +91,7 @@ class ReviewScreenListviewItem extends StatelessWidget {
                           decoration: BoxDecoration(
                               shape: BoxShape.rectangle, color: Colors.black),
                           child: Center(
-                            child: Text(
+                            child: const Text(
                               'Edit',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -70,7 +99,7 @@ class ReviewScreenListviewItem extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
@@ -79,33 +108,33 @@ class ReviewScreenListviewItem extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(
                                   left: width * 0.007, right: width * 0.007),
-                              child: Image.asset(
-                                  'assets/images/review_star_Image.png'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left: width * 0.007, right: width * 0.007),
-                              child: Image.asset(
-                                  'assets/images/review_star_Image.png'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left: width * 0.007, right: width * 0.007),
-                              child: Image.asset(
-                                  'assets/images/review_star_Image.png'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left: width * 0.007, right: width * 0.007),
-                              child: Image.asset(
-                                  'assets/images/review_star_Image.png'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left: width * 0.007, right: width * 0.007),
-                              child: Image.asset(
-                                  'assets/images/review_star_Image.png'),
-                            ),
+                              child: returnStars(numberOfStar),
+
+                              // Padding(
+                              //   padding: EdgeInsets.only(
+                              //       left: width * 0.007, right: width * 0.007),
+                              //   child: Image.asset(
+                              //       'assets/images/review_star_Image.png'),
+                              // ),
+                              // Padding(
+                              //   padding: EdgeInsets.only(
+                              //       left: width * 0.007, right: width * 0.007),
+                              //   child: Image.asset(
+                              //       'assets/images/review_star_Image.png'),
+                              // ),
+                              // Padding(
+                              //   padding: EdgeInsets.only(
+                              //       left: width * 0.007, right: width * 0.007),
+                              //   child: Image.asset(
+                              //       'assets/images/review_star_Image.png'),
+                              // ),
+                              // Padding(
+                              //   padding: EdgeInsets.only(
+                              //       left: width * 0.007, right: width * 0.007),
+                              //   child: Image.asset(
+                              //       'assets/images/review_star_Image.png'),
+                              // ),
+                            )
                           ],
                         )
                       ],

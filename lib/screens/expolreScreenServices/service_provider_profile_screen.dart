@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shundor_go/dummyData/service_provider_profile_screen_listview_dummy_data.dart';
 import 'package:shundor_go/widget/servicesScreen/service_provider_profile_screen_listview_item.dart';
-import 'package:shundor_go/widget/servicesScreen/service_provider_screen_listview_item.dart';
+// import 'package:shundor_go/widget/servicesScreen/service_provider_screen_listview_item.dart';
 
 class ServiceProviderProfileScreen extends StatelessWidget {
   static const routeName = 'service_provider_profile_screen';

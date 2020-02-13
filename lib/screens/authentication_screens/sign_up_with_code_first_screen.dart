@@ -47,155 +47,159 @@ class _SignUpWithCodeFirstScreenState extends State<SignUpWithCodeFirstScreen> {
         MediaQuery.of(context).padding.top;
     final mobileNumber = ModalRoute.of(context).settings.arguments as String;
     return Scaffold(
-      appBar: appbar,
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        appBar: appbar,
+        body: SingleChildScrollView(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
 
-        children: <Widget>[
-          // SizedBox(
-          //   height: 16,
-          // ),
-          Container(
-            padding: EdgeInsets.only(
-                left: width * 0.02,
-                right: width * 0.02,
-                top: height * 0.02,
-                bottom: height * 0.02),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(
-                  Icons.edit,
-                  // color: Colors.yellowAccent,
-                  color: const Color(0xFFD4AF37),
-                  size: 24,
-                ),
-                SizedBox(
-                  width: width * 0.01,
-                ),
-                Text(
-                  mobileNumber,
-                  style: TextStyle(
+            children: <Widget>[
+              // SizedBox(
+              //   height: 16,
+              // ),
+              Container(
+                padding: EdgeInsets.only(
+                    left: width * 0.02,
+                    right: width * 0.02,
+                    top: height * 0.02,
+                    bottom: height * 0.02),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Icon(
+                      Icons.edit,
+                      // color: Colors.yellowAccent,
                       color: const Color(0xFFD4AF37),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
-                )
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(
-                left: width * 0.02,
-                right: width * 0.02,
-                top: height * 0.02,
-                bottom: height * 0.02),
-            // margin: EdgeInsets.only(left: 16),
-            // padding: EdgeInsets.only(left: 0, right: 0),
-            // margin: EdgeInsets.only(left: 16, right: 0),
-            // margin: EdgeInsets.only(left: 14, right: 10),
-            // margin: EdgeInsets.only(
-            //   left: 8,
-            // ),
-            // padding: EdgeInsets.all(16),
-            child: PinCodeTextField(
-              hasTextBorderColor: const Color(
-                0xFFe0e0e0,
-              ),
-              pinTextStyle:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              wrapAlignment: WrapAlignment.spaceAround,
-              maxLength: 6,
-              controller: pinCodeController,
-              keyboardType: TextInputType.text,
-              onDone: (_) => showPincode(),
-              autofocus: true,
-              pinBoxWidth: 50,
-              pinBoxHeight: 50,
-              pinBoxOuterPadding:
-                  EdgeInsets.only(left: width * 0.002, right: width * 0.002),
-              pinBoxColor: const Color(
-                0xFFe0e0e0,
-              ),
-              defaultBorderColor: const Color(
-                0xFFe0e0e0,
-              ),
-            ),
-          ),
-          isPinGiven
-              ? SignUpPageActiveContinueButton(height, width)
-              : SignUpPageInactiveContinueButton(height, width),
-          InkWell(
-            child: Container(
-              margin: EdgeInsets.only(top: height * 0.02),
-              child: Center(
-                child: Text(
-                  'I didn\'t get a code',
-                  style: TextStyle(
-                      color: const Color(0xFFD4AF37),
-                      fontWeight: FontWeight.bold),
+                      size: 24,
+                    ),
+                    SizedBox(
+                      width: width * 0.01,
+                    ),
+                    Text(
+                      mobileNumber,
+                      style: TextStyle(
+                          color: const Color(0xFFD4AF37),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    )
+                  ],
                 ),
               ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.02, top: width * 0.01, right: width * 0.02),
-            child: RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-                  style: TextStyle(
-                    color: Colors.black,
+              Container(
+                margin: EdgeInsets.only(
+                    left: width * 0.02,
+                    right: width * 0.02,
+                    top: height * 0.02,
+                    bottom: height * 0.02),
+                // margin: EdgeInsets.only(left: 16),
+                // padding: EdgeInsets.only(left: 0, right: 0),
+                // margin: EdgeInsets.only(left: 16, right: 0),
+                // margin: EdgeInsets.only(left: 14, right: 10),
+                // margin: EdgeInsets.only(
+                //   left: 8,
+                // ),
+                // padding: EdgeInsets.all(16),
+                child: PinCodeTextField(
+                  hasTextBorderColor: const Color(
+                    0xFFe0e0e0,
                   ),
-                  children: <TextSpan>[
-                    TextSpan(text: 'Tap Continue to accept Facebook/’s '),
-                    TextSpan(
-                        text: ' Terms',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationThickness: 2.5,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => print('Terms  clicked')),
-                    TextSpan(text: ' ,'),
-                    TextSpan(
-                        text: ' Data Policy,',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationThickness: 2.5,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => print('Data Policy is clicked')),
-                    TextSpan(
-                        text: ' cookie use,',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationThickness: 2.5,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => print(' cookie use is clicked')),
-                    TextSpan(text: ' and the'),
-                    TextSpan(
-                        text: ' Privacy Policy',
-                        style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            decorationThickness: 2.5),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => print('privacy policy is clicked')),
-                    TextSpan(text: ' and '),
-                    TextSpan(
-                        text: 'Terms of Servic',
-                        style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            decorationThickness: 2.5),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => print('Terms of Service is Clicked')),
-                    TextSpan(text: ' of Shundorgo')
-                  ]),
-            ),
-          )
-        ],
-      ),
-    );
+                  pinTextStyle: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                  wrapAlignment: WrapAlignment.spaceAround,
+                  maxLength: 6,
+                  controller: pinCodeController,
+                  keyboardType: TextInputType.text,
+                  onDone: (_) => showPincode(),
+                  autofocus: true,
+                  pinBoxWidth: 50,
+                  pinBoxHeight: 50,
+                  pinBoxOuterPadding: EdgeInsets.only(
+                      left: width * 0.002, right: width * 0.002),
+                  pinBoxColor: const Color(
+                    0xFFe0e0e0,
+                  ),
+                  defaultBorderColor: const Color(
+                    0xFFe0e0e0,
+                  ),
+                ),
+              ),
+              isPinGiven
+                  ? SignUpPageActiveContinueButton(height, width)
+                  : SignUpPageInactiveContinueButton(height, width),
+              InkWell(
+                child: Container(
+                  margin: EdgeInsets.only(top: height * 0.02),
+                  child: Center(
+                    child: const Text(
+                      'I didn\'t get a code',
+                      style: TextStyle(
+                          color: const Color(0xFFD4AF37),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                    left: width * 0.02, top: width * 0.01, right: width * 0.02),
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        const TextSpan(
+                            text: 'Tap Continue to accept Facebook/’s '),
+                        TextSpan(
+                            text: ' Terms',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2.5,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () => print('Terms  clicked')),
+                        const TextSpan(text: ' ,'),
+                        TextSpan(
+                            text: ' Data Policy,',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2.5,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () => print('Data Policy is clicked')),
+                        TextSpan(
+                            text: ' cookie use,',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2.5,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () => print(' cookie use is clicked')),
+                        const TextSpan(text: ' and the'),
+                        TextSpan(
+                            text: ' Privacy Policy',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                decorationThickness: 2.5),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap =
+                                  () => print('privacy policy is clicked')),
+                        const TextSpan(text: ' and '),
+                        TextSpan(
+                            text: 'Terms of Servic',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                decorationThickness: 2.5),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap =
+                                  () => print('Terms of Service is Clicked')),
+                        const TextSpan(text: ' of Shundorgo')
+                      ]),
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }

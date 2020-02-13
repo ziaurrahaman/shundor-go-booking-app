@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/screens/explore/woman_explore_screen.dart';
+// import 'package:shundor_go/screens/explore/woman_explore_screen.dart';
 
 class BothExporeSceenGridItem extends StatelessWidget {
   final String title;

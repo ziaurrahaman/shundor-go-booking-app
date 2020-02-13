@@ -14,11 +14,11 @@ class FifthOnbordingScreen extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Center(
-                  child: Icon(
+                  child: const Icon(
                 Icons.location_on,
                 color: Colors.white,
                 size: 128,
@@ -28,7 +28,7 @@ class FifthOnbordingScreen extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Text(
+                    child: const Text(
                       'Enable Location Service',
                       style: TextStyle(
                           color: Colors.white,
@@ -37,9 +37,9 @@ class FifthOnbordingScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     // margin: EdgeInsets.only(left: 10, right: 10),
-                    child: Text(
+                    child: const Text(
                       'Get the best beauty recommendations around you SundhorGo will need to use your location services to do this',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -66,17 +66,21 @@ class FifthOnbordingScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   InkWell(
-                    onTap: () => Navigator.of(context)
-                        .pushReplacementNamed(LastOnBordingScreen.routeName),
+                    onTap: () =>
+                        // Navigator.of(context)
+                        //     .pushReplacementNamed(LastOnBordingScreen.routeName),
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                            LastOnBordingScreen.routeName,
+                            (Route<dynamic> route) => false),
                     child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16),
-                      padding: EdgeInsets.all(16),
+                      margin: const EdgeInsets.only(left: 16, right: 16),
+                      padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
                           color: Colors.white, shape: BoxShape.rectangle),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'ENABLE LOCATION',
                             style: TextStyle(color: Colors.black),
                           ),
@@ -84,10 +88,10 @@ class FifthOnbordingScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
-                  Text(
+                  const Text(
                     'NOT NOW',
                     style: TextStyle(color: Colors.white),
                   )

@@ -11,7 +11,8 @@ class SalonAtHomeScreen extends StatelessWidget {
           scrollDirection: Axis.vertical,
           itemCount: SALLON_AT_HOME_LISTVIEW_MODEL_DUMMY_DATA.length,
           itemBuilder: (ctx, index) => SalonAtHomeTopMostListviewItem(
-              SALLON_AT_HOME_LISTVIEW_MODEL_DUMMY_DATA[index].serviceTitle),
+              SALLON_AT_HOME_LISTVIEW_MODEL_DUMMY_DATA[index].serviceTitle,
+              index),
         ),
       ),
     );

@@ -7,25 +7,25 @@ class LocationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Location',
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
-          onPressed: null,
+          onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: Colors.black,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -34,7 +34,7 @@ class LocationScreen extends StatelessWidget {
                 flex: 75,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Text(
+                  child: const Text(
                     'AVAILABLE ADRESS',
                     style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
@@ -42,7 +42,7 @@ class LocationScreen extends StatelessWidget {
               ),
               Expanded(
                 flex: 25,
-                child: Text(
+                child: const Text(
                   'Add Adress',
                   style: TextStyle(
                     fontSize: 16,
@@ -53,7 +53,7 @@ class LocationScreen extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Column(
@@ -61,14 +61,14 @@ class LocationScreen extends StatelessWidget {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(left: 20),
-                child: Text(
+                child: const Text(
                   'Dhaka, Bangladesh',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20, top: 5),
-                child: Text(
+                child: const Text(
                   '107, Rajarbag, Sajahanpur, Dahaka-1214',
                   style: TextStyle(fontSize: 16),
                 ),

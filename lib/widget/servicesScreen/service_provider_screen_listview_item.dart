@@ -47,7 +47,7 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
                         ),
                         Row(
                           children: <Widget>[
-                            Icon(
+                            const Icon(
                               Icons.star,
                               color: const Color(0xFFD4AF37),
                               size: 16,
@@ -95,7 +95,7 @@ class ServiceProviderScreenListviewItem extends StatelessWidget {
                         child: Center(
                           child: Padding(
                             padding: EdgeInsets.only(right: width * 0.009),
-                            child: Text(
+                            child: const Text(
                               'BOOK',
                               textAlign: TextAlign.start,
                               style: TextStyle(

@@ -3,19 +3,24 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 class PaymentScreen extends StatelessWidget {
   static const routeName = 'payment_screen';
-  final appbar = AppBar(
-      centerTitle: true,
-      title: Text(
-        'Payment',
-        style: TextStyle(
-            fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
-      ));
+
   @override
   Widget build(BuildContext context) {
+    final appbar = AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        centerTitle: true,
+        title: Text(
+          'Payment',
+          style: TextStyle(
+              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+        ));
     double heigth = MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top -
         appbar.preferredSize.height;
-    double width = MediaQuery.of(context).size.width;
+    // double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: appbar,
       body: Column(
@@ -28,7 +33,7 @@ class PaymentScreen extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(left: 16, top: 24),
-                  child: Text(
+                  child: const Text(
                     'PAYMENT OPTION',
                     style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
@@ -43,7 +48,7 @@ class PaymentScreen extends StatelessWidget {
                           left: 16,
                           top: 20,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           MdiIcons.checkboxBlankCircleOutline,
                           color: const Color(0xFFD4AF37),
                         ),
@@ -53,7 +58,7 @@ class PaymentScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 20, top: 20),
-                            child: Text(
+                            child: const Text(
                               'Cash On Delivery',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
@@ -71,7 +76,7 @@ class PaymentScreen extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(left: 16, top: 20),
-                        child: Icon(
+                        child: const Icon(
                           MdiIcons.checkboxBlankCircleOutline,
                           color: Colors.grey,
                         ),
@@ -81,7 +86,7 @@ class PaymentScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 20, top: 20),
-                            child: Text(
+                            child: const Text(
                               'Cash On Delivery',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
@@ -99,7 +104,7 @@ class PaymentScreen extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(left: 16, top: 20),
-                        child: Icon(
+                        child: const Icon(
                           MdiIcons.checkboxBlankCircleOutline,
                           color: Colors.grey,
                         ),
@@ -109,7 +114,7 @@ class PaymentScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 20, top: 20),
-                            child: Text(
+                            child: const Text(
                               'Cash On Delivery',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
@@ -132,7 +137,7 @@ class PaymentScreen extends StatelessWidget {
                     color: Colors.black, shape: BoxShape.rectangle),
                 width: double.infinity,
                 child: Center(
-                  child: Text(
+                  child: const Text(
                     'CONFIRM',
                     style: TextStyle(
                         color: Colors.white,

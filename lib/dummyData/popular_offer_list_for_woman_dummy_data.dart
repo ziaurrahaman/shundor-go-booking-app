@@ -9,4 +9,8 @@ const POPULAR_OFFER_FOR_WOMAN_LIST_DUMMY_DAT = const [
       popularOfferListImagePath: 'assets/images/hair_style_at_home.png',
       popularOfferListTitle: 'Hair Style At Home',
       popularOfferListServiceCost: '499'),
+  PopularOfferListForWomanModel(
+      popularOfferListImagePath: 'assets/images/facial_for_woman.png',
+      popularOfferListTitle: 'Hair Styling',
+      popularOfferListServiceCost: '699'),
 ];

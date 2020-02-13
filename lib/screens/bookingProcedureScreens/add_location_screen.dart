@@ -24,7 +24,7 @@ class AddLocationScreen extends StatelessWidget {
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
-          onPressed: null,
+          onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: Colors.black,
       ),

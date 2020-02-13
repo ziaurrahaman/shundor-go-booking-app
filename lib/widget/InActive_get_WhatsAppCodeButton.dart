@@ -5,20 +5,21 @@ class InActiveGetWhatsAppCodeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 14, right: 10),
-      padding: EdgeInsets.all(14),
-      decoration: BoxDecoration(shape: BoxShape.rectangle, color: Colors.white),
+      margin: const EdgeInsets.only(left: 14, right: 10),
+      padding: const EdgeInsets.all(14),
+      decoration:
+          const BoxDecoration(shape: BoxShape.rectangle, color: Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Icon(
+          const Icon(
             MdiIcons.whatsapp,
             color: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
-          Text(
+          const Text(
             'Get a WhatsApp code',
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),

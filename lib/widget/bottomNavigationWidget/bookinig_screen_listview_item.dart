@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/dummyData/booking_screen_listvvie_dummy_data.dart';
+// import 'package:shundor_go/dummyData/booking_screen_listvvie_dummy_data.dart';
 
 class BookingScreenListviewItem extends StatelessWidget {
   final String month;
@@ -19,7 +19,7 @@ class BookingScreenListviewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 5, bottom: 5),
+      margin: const EdgeInsets.only(top: 5, bottom: 5),
       child: Card(
         elevation: 5,
         child: Padding(
@@ -86,7 +86,7 @@ class BookingScreenListviewItem extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.rectangle, color: Colors.black),
                     child: Center(
-                      child: Text(
+                      child: const Text(
                         'Details',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.white),

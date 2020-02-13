@@ -8,14 +8,14 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var appbar = AppBar(
       leading: IconButton(
-        icon: Icon(
+        icon: const Icon(
           Icons.arrow_back_ios,
         ),
         onPressed: () => Navigator.of(context).pop(),
         color: Colors.white,
       ),
       centerTitle: true,
-      title: Text('LOCATION SCREEN'),
+      title: const Text('LOCATION SCREEN'),
       backgroundColor: Colors.black,
     );
     double height = MediaQuery.of(context).size.height -
@@ -30,7 +30,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
               height: height * 0.90,
               child: Column(
                 children: <Widget>[
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -39,7 +39,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                         flex: 75,
                         child: Padding(
                           padding: const EdgeInsets.only(left: 20),
-                          child: Text(
+                          child: const Text(
                             'AVAILABLE ADRESS',
                             style: TextStyle(fontSize: 14, color: Colors.black),
                           ),
@@ -47,7 +47,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 25,
-                        child: Text(
+                        child: const Text(
                           'Add Adress',
                           style: TextStyle(
                             fontSize: 16,
@@ -58,7 +58,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -66,7 +66,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(left: 16),
-                        child: Icon(
+                        child: const Icon(
                           MdiIcons.checkboxBlankCircleOutline,
                           color: Colors.grey,
                         ),
@@ -76,7 +76,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text(
+                            child: const Text(
                               'Home',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
@@ -84,7 +84,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20, top: 5),
-                            child: Text(
+                            child: const Text(
                               '107, Rajarbag, Sajahanpur, Dahaka-1214',
                               style: TextStyle(fontSize: 16),
                             ),
@@ -93,7 +93,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -101,7 +101,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(left: 16),
-                        child: Icon(
+                        child: const Icon(
                           MdiIcons.checkboxBlankCircleOutline,
                           color: const Color(0xFFD4AF37),
                         ),
@@ -111,7 +111,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text(
+                            child: const Text(
                               'Office',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
@@ -119,7 +119,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20, top: 5),
-                            child: Text(
+                            child: const Text(
                               '107, Rajarbag, Sajahanpur, Dahaka-1214',
                               style: TextStyle(fontSize: 16),
                             ),
@@ -140,7 +140,7 @@ class LocationFoundedByGoogleScreen extends StatelessWidget {
                 height: height * 0.10,
                 width: double.infinity,
                 child: Center(
-                  child: Text(
+                  child: const Text(
                     'PROCEED',
                     style: TextStyle(
                         color: Colors.white,

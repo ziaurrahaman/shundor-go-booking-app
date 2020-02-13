@@ -1,57 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:shundor_go/dummyData/service_provider_screen_listview_dummy_data.dart';
-import 'package:shundor_go/widget/expoloreScreenWidget/explore_screen_tilte.dart';
+// import 'package:shundor_go/widget/expoloreScreenWidget/explore_screen_tilte.dart';
 import 'package:shundor_go/widget/servicesScreen/service_provider_screen_listview_item.dart';
 
 class ServiceProvidersScreen extends StatelessWidget {
   static const routeName = 'service_provider_screen';
-  final appBar = AppBar(
-    backgroundColor: Colors.black,
-    leading: IconButton(
-      icon: Icon(
-        Icons.arrow_back_ios,
-        color: Colors.white,
-      ),
-      onPressed: null,
-    ),
-    title: Column(
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 2),
-              child: Text(
-                'Find Service at',
-                textAlign: TextAlign.start,
-                style: TextStyle(color: Colors.white, fontSize: 10),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Icon(
-              Icons.location_on,
-              color: Colors.white,
-              size: 16,
-            ),
-            Text(
-              'Bashundhara R\/A',
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            )
-          ],
-        )
-      ],
-    ),
-  );
 
   @override
   Widget build(BuildContext context) {
+    final appBar = AppBar(
+      backgroundColor: Colors.black,
+      leading: IconButton(
+        icon: const Icon(
+          Icons.arrow_back_ios,
+          color: Colors.white,
+        ),
+        onPressed: () => Navigator.of(context).pop(),
+      ),
+      title: Column(
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(left: 2),
+                child: const Text(
+                  'Find Service at',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(color: Colors.white, fontSize: 10),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              const Icon(
+                Icons.location_on,
+                color: Colors.white,
+                size: 16,
+              ),
+              const Text(
+                'Bashundhara R\/A',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              )
+            ],
+          )
+        ],
+      ),
+    );
     final double height = MediaQuery.of(context).size.height -
         appBar.preferredSize.height -
         MediaQuery.of(context).padding.top;

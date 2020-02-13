@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 // import '../screens/explore/main_explore_screen.dart';
-import 'package:shundor_go/screens/explore/both_explore_screen.dart';
+// import 'package:shundor_go/screens/explore/both_explore_screen.dart';
 import 'package:shundor_go/screens/explore/woman_explore_screen.dart';
 
 class LastOnBordingScreen extends StatelessWidget {
   static const routeName = '/last_onbording_screen';
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    // double height = MediaQuery.of(context).size.height;
+    // double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.black),
+            decoration: const BoxDecoration(color: Colors.black),
           ),
           Column(
             children: <Widget>[
@@ -26,10 +26,10 @@ class LastOnBordingScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.all(16),
-                      padding: EdgeInsets.all(16),
+                      margin: const EdgeInsets.all(16),
+                      padding: const EdgeInsets.all(16),
                       child: Center(
-                          child: Text(
+                          child: const Text(
                         'ShundorGo lets you easily find beauty services in your area',
                         textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.white, fontSize: 18),
@@ -44,7 +44,7 @@ class LastOnBordingScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     Container(
-                      child: Text(
+                      child: const Text(
                         'First, show me services for:',
                         style: TextStyle(
                             color: Colors.white,
@@ -64,17 +64,17 @@ class LastOnBordingScreen extends StatelessWidget {
                       onTap: () => Navigator.of(context)
                           .pushNamed(WomanExploreScreen.routeName),
                       child: Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                           left: 16,
                           right: 16,
                         ),
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(16),
+                        decoration: const BoxDecoration(
                             color: Colors.white, shape: BoxShape.rectangle),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text(
+                            const Text(
                               'WOMEN',
                               style: TextStyle(color: Colors.black),
                             ),
@@ -86,14 +86,14 @@ class LastOnBordingScreen extends StatelessWidget {
                       onTap: () => Navigator.of(context)
                           .pushNamed(WomanExploreScreen.routeName),
                       child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16),
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
+                        margin: const EdgeInsets.only(left: 16, right: 16),
+                        padding: const EdgeInsets.all(16),
+                        decoration: const BoxDecoration(
                             color: Colors.white, shape: BoxShape.rectangle),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text(
+                            const Text(
                               'MEN',
                               style: TextStyle(color: Colors.black),
                             ),
@@ -105,14 +105,14 @@ class LastOnBordingScreen extends StatelessWidget {
                       onTap: () => Navigator.of(context)
                           .pushNamed(WomanExploreScreen.routeName),
                       child: Container(
-                        margin: EdgeInsets.only(left: 16, right: 16),
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
+                        margin: const EdgeInsets.only(left: 16, right: 16),
+                        padding: const EdgeInsets.all(16),
+                        decoration: const BoxDecoration(
                             color: Colors.white, shape: BoxShape.rectangle),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text(
+                            const Text(
                               'BOTH',
                               style: TextStyle(color: Colors.black),
                             ),

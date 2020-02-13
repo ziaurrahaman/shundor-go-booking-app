@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shundor_go/screens/expolreScreenServices/salon_at_home_sceen.dart';
+// import 'package:shundor_go/screens/expolreScreenServices/salon_at_home_sceen.dart';
 import 'package:shundor_go/screens/expolreScreenServices/service_host_screen.dart';
 
 class WomanExploreScreenListItemWithIcon extends StatelessWidget {
@@ -12,13 +12,16 @@ class WomanExploreScreenListItemWithIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void goToTappedServices(int index) {
-      switch (index) {
-        case 0:
-          Navigator.of(context).pushNamed(ServiceHostScreen.routeName);
-          break;
-        default:
-          return;
-      }
+      // switch (index) {
+      //   case 0:
+      //     Navigator.of(context)
+      //         .pushNamed(ServiceHostScreen.routeName, arguments: index);
+      //     break;
+      //   default:
+      //     return;
+      // }
+      Navigator.of(context)
+          .pushNamed(ServiceHostScreen.routeName, arguments: index);
     }
 
     return InkWell(
@@ -27,14 +30,14 @@ class WomanExploreScreenListItemWithIcon extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
-              padding: EdgeInsets.all(10),
-              decoration:
-                  BoxDecoration(color: Colors.white, shape: BoxShape.rectangle),
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  color: Colors.white54, shape: BoxShape.rectangle),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Material(
@@ -49,7 +52,7 @@ class WomanExploreScreenListItemWithIcon extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Padding(
